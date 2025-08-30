@@ -6,9 +6,9 @@
   <title>alapvi · Sitios y material</title>
   <style>
     :root{
-      --fg:#0f172a;         /* texto principal */
-      --muted:#475569;      /* texto secundario */
-      --link:#0ea5e9;       /* enlaces/botones */
+      --fg:#0f172a;
+      --muted:#475569;
+      --link:#0ea5e9;
       --ring:rgba(14,165,233,.25);
       --card-border:#e2e8f0;
     }
@@ -17,7 +17,6 @@
     body{
       margin:0; color:var(--fg);
       font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
-      /* fondo pastel con varios radiales + un linear muy suave */
       background:
         radial-gradient(1200px 800px at -10% -20%, #ffe4e6 0%, transparent 40%),
         radial-gradient(1000px 700px at 110% 0%,  #e0f2fe 0%, transparent 45%),
@@ -37,13 +36,12 @@
       border:1px solid var(--card-border);
       border-radius:18px;
       padding:1.15rem 1.25rem 1.25rem;
-      background:#ffffffcc; /* fallback */
+      background:#ffffffcc;
       backdrop-filter:saturate(1.1) blur(1px);
       box-shadow: 0 6px 24px rgba(15,23,42,.06);
       transition: transform .15s ease, box-shadow .15s ease;
       overflow: hidden;
     }
-    /* cintilla superior con color del card */
     .card::before{
       content:"";
       position:absolute; inset:0 0 auto 0; height:6px;
@@ -65,7 +63,7 @@
     }
     .card a:hover{ transform: translateY(-1px); box-shadow: 0 6px 18px rgba(14,165,233,.2); }
 
-    /* variantes con degradé suave para cada card */
+    /* variantes */
     .card--sbd{
       background:
         linear-gradient(145deg, rgba(199,210,254,.35), rgba(125,211,252,.35)),
@@ -86,9 +84,18 @@
       background:linear-gradient(90deg, #f43f5e, #f59e0b);
     }
 
+    .card--docker{
+      background:
+        linear-gradient(145deg, rgba(134,239,172,.35), rgba(125,211,252,.35)),
+        #ffffffcc;
+      border-color: rgba(34,197,94,.25);
+    }
+    .card--docker::before{
+      background:linear-gradient(90deg, #22c55e, #0ea5e9);
+    }
+
     footer{ margin-top:2rem; color:var(--muted); font-size:.95rem; }
 
-    /* modo oscuro opcional */
     @media (prefers-color-scheme: dark){
       :root{ --fg:#e5e7eb; --muted:#cbd5e1; --card-border:#324055; }
       body{
@@ -121,6 +128,12 @@
         <h2>SGE — Sistemas de Gestión Empresarial</h2>
         <p>Documentación y materiales del sitio SGE (temario, prácticas y referencias).</p>
         <a href="https://alapvi.github.io/sge/" aria-label="Ir al sitio de SGE">Ir a SGE →</a>
+      </article>
+
+      <article class="card card--docker">
+        <h2>Docker y Git</h2>
+        <p>Materiales para aprender los fundamentos de Docker y Git.</p>
+        <a href="https://alapvi.github.io/docker/" aria-label="Ir al sitio de Docker/Git">Ir a Docker →</a>
       </article>
     </section>
 
