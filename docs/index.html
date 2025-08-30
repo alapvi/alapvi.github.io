@@ -29,7 +29,12 @@
     h1{ font-size: clamp(1.6rem, 2.6vw, 2.3rem); margin:0 0 .35rem; letter-spacing:.2px; }
     p.lead{ color:var(--muted); margin:.25rem 0 1.75rem; }
 
-    .grid{ display:grid; gap:1.1rem; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); }
+    /* grid en columna única */
+    .grid{
+      display:grid;
+      gap:1.1rem;
+      grid-template-columns: 1fr; /* siempre una sola columna */
+    }
 
     .card{
       position:relative;
@@ -131,9 +136,9 @@
       </article>
 
       <article class="card card--docker">
-        <h2>Docker y Git</h2>
-        <p>Materiales para aprender los fundamentos de Docker y Git.</p>
-        <a href="https://alapvi.github.io/docker/" aria-label="Ir al sitio de Docker/Git">Ir a Docker →</a>
+        <h2>Conceptos básicos de Docker</h2>
+        <p>Guía introductoria y materiales para aprender los fundamentos de Docker.</p>
+        <a href="https://alapvi.github.io/docker/" aria-label="Ir al sitio de Docker">Ir a Docker →</a>
       </article>
     </section>
 
